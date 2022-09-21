@@ -63,15 +63,15 @@ def duplicate(num1, num2):
     return result
 
 if __name__ == '__main__':
-    print('please enter the path of the origin work:')
-    path1=input()
-    print('please enter the path of the test work:')
-    path2=input()
-    print('please enter the path of the savedata:')
-    save_path=input()
-    # path1 = "F:\learning\softwareengineering\测试文本\orig.txt"
-    # path2 = "F:\learning\softwareengineering\测试文本\orig_0.8_add.txt"
-    # save_path = "F:\learning\softwareengineering\测试文本\save.txt"
+    # print('please enter the path of the origin work:')
+    # path1=input()
+    # print('please enter the path of the test work:')
+    # path2=input()
+    # print('please enter the path of the savedata:')
+    # save_path=input()
+    path1 = "_testTextInit\_testText\origin_text_1.txt"
+    path2 = "_testTextInit\_testText\origin_text_1_dis.txt"
+    save_path = "_testTextInit"
     str1 = get_file_contents(path1)
     str2 = get_file_contents(path2)
     text1 = filter(str1)
