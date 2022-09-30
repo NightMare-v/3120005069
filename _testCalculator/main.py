@@ -22,7 +22,7 @@ parser.add_option("-e", action='store', type='string', dest='JudgeFile', help="�
 options, args = parser.parse_args() # 传入参数与命令
 
 # 以下为测试代码块
-# print(options.Numbers, options.Range, options.ProExFile)
+# print(options.Numbers, options.Range)
 # options.Numbers=30
 # options.Range=10
 # options.AnsFile='StandExercises.txt'
