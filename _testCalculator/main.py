@@ -1,6 +1,8 @@
 import time
 import sys
 import os
+pid = os.getpid()
+print('pid: ', pid)
 
 sys.path.append(os.path.realpath("."))
 
@@ -27,7 +29,7 @@ options, args = parser.parse_args() # 传入参数与命令
 # options.JudgeFile='Ans.txt'
 
 # options
-if options.Numbers is not None and options.Range:  #  and options.ProExFile
+if options.Numbers is not None and options.Range:
     '生成Numbers条有负数结果的算式, 再将其标准化(去除中间过程有负数结果的算式以及/后面有0的非法算式), 输出文件是StandExercises.txt'
     fileE = Generate(options.Numbers, options.Range)
     fileStand = Verify(fileE.filename)
@@ -37,11 +39,11 @@ if options.AnsFile and not options.Numbers:
     '回答-a后面的filename题目文件,并输出结果到Answers.txt文件'
     fileA = Answer(options.AnsFile)
 
-if options.ProExFile and options.Numbers and options.Range and not options.AnsFile:
+if options.Numbers and options.Range and not options.AnsFile:
     '生成Numbers条有负数结果的算式, 生成文件是Exercises.txt'
     fileE = Generate(options.Numbers, options.Range)
 
-if options.JudgeFile and not options.Numbers and not options.Range and not options.ProExFile:
+if options.JudgeFile and not options.Numbers and not options.Range:
     '-e 接一个用户的答案文件, 并将其和标准答案文件Answers.txt比较'
     FileA = Judge(options.JudgeFile, "Answers.txt")
 
