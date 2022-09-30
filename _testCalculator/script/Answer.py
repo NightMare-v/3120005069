@@ -4,7 +4,7 @@ from fractions import Fraction
 import os
 
 class Answer:
-#这是用于生成任何题目文件的结果到Answers.txt中的类
+# 用于生成任何题目文件的结果到Answers.txt中的类
 
     def __init__(self, FileName):
         self.file = FileName
@@ -19,10 +19,6 @@ class Answer:
                 s = s.replace(sub_str, str(int(l_num) * int(r_num)))
             else:
                 break
-                # l_num, r_num = sub_str.split('/')
-                # l_num=int(l_num)
-                # r_num=int(r_num)
-                # s = s.replace(sub_str, Fraction(l_num,r_num))
             sub_str = re.search('(\d+\.?\d*[*/]\d+\.?\d*)', s)
         return s
 
@@ -101,19 +97,10 @@ class Answer:
         total = 0
         for i in range(0,len(tmp)):
             total = int(tmp[i]) + total
-        # sub_str = re.search('(\d+\.?\d*[*/]-?\d+\.?\d*)', s)
-        # sub_str = sub_str.group()
-        # l_num, r_num = sub_str.split('/')
-        # l_num=int(l_num)
-        # r_num=int(r_num)
-        # s = s.replace(s, s+Fraction(l_num,r_num))
 
         # total与分数求和
         for i in range(0,len(fra1)):
             total = Fraction(fra1[i]) + total
-        # fra1 = "".join(fra1)
-        # fra1=Fraction(fra1)
-        # tmp = int(tmp)
 
         # 可以化为真分数
         # total = float(total)

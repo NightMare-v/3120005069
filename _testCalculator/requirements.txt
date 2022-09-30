@@ -1,0 +1,13 @@
+altgraph==0.17.3
+cloudpickle==2.2.0
+commonmark==0.9.1
+coverage==6.4.4
+future==0.18.2
+pefile==2022.5.30
+Pygments==2.13.0
+pyinstaller==5.4.1
+pyinstaller-hooks-contrib==2022.10
+pynvml==11.4.1
+pywin32-ctypes==0.2.0
+rich==12.5.1
+scalene==1.5.11
